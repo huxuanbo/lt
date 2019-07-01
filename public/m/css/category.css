@@ -1,0 +1,53 @@
+.cate-content {
+    position: absolute;
+    top: 44px;
+    bottom: 50px;
+    width: 100%;
+    background: #f5f5f5;
+}
+
+.cate-left {
+    position: relative;
+    width: 80px;
+    height: 100%;
+    float: left;
+    touch-action: none;
+}
+
+.cate-right {
+    position: relative;
+    margin-left: 90px;
+    height: 100%;
+    touch-action: none;
+}
+
+.cate-left ul {}
+
+.cate-left ul li {}
+
+.cate-left ul li a {
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    background: #FFF;
+    border-bottom: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+}
+
+.cate-left ul li a.active {
+    background: #f5f5f5;
+    border-right: 1px solid transparent;
+}
+
+.cate-right ul {}
+
+.cate-right ul li a {
+    width: 33.33333%;
+    float: left;
+    padding: 0 5px 5px 0;
+}
+
+.cate-right ul img {
+    width: 100%;
+}
