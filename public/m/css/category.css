@@ -21,10 +21,6 @@
     touch-action: none;
 }
 
-.cate-left ul {}
-
-.cate-left ul li {}
-
 .cate-left ul li a {
     display: block;
     height: 45px;
@@ -40,8 +36,6 @@
     border-right: 1px solid transparent;
 }
 
-.cate-right ul {}
-
 .cate-right ul li a {
     width: 33.33333%;
     float: left;
@@ -50,4 +44,12 @@
 
 .cate-right ul img {
     width: 100%;
+}
+
+.cate-right span {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    color: #8f8f94;
+    background-color: #fff;
 }

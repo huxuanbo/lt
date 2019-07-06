@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/mui/css/mui.css">
+    <link rel="stylesheet" href="./assets/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/search-result.css">
+    <script src="./assets/zepto/zepto.min.js"></script>
+    <script src="assets/mui/js/mui.min.js"></script>
+    <script src="./assets/art-template/lib/template-web.js"></script>
+    <script src="./js/search-result.js"></script>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav lt-header">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+
+        <h1 class="mui-title">商品目录</h1>
+    </header>
+
+
+
+
+    <div id="refreshContainer">
+        <div>
+            <div class="search-all">
+                <div class="mui-row">
+                    <div class="mui-col-xs-6 search-bar" id="price-btn">
+                        价格&nbsp;<span class="fa fa-angle-down"></span>
+                    </div>
+                    <div class="mui-col-xs-6 search-bar" id="num-btn">
+                        销量&nbsp;<span class="fa fa-angle-down"></span>
+                    </div>
+                </div>
+            </div>
+            <!-- 搜索列表 -->
+            <div class="product-list-item">
+                <div class="product-list">
+                    <ul id="searchListBox">
+
+                    </ul>
+                </div>
+            </div>
+            <!-- /搜索列表 -->
+        </div>
+    </div>
+
+    <script id="searchList" type="text/template">
+        {{ each data val }}
+        <li>
+            <a href="detail.html?id={{ val.id }}">
+                <img src="{{ val.pic[0].picAddr }}" alt="">
+                <p class="pro-name">{{ val.proName }}</p>
+                <p>
+                    <span>{{ val.price }}</span>
+                    <del>{{ val.oldPrice }}</del>
+                </p>
+                <button type="button" class="mui-btn mui-btn-warning">立即购买</button>
+            </a>
+        </li>
+        {{ /each }}
+    </script>
+
+</body>
+
+</html>

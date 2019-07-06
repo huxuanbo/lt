@@ -45,3 +45,8 @@ img {
 .mui-bar-tab {
     touch-action: none;
 }
+
+.my-content {
+    margin-top: 44px;
+    touch-action: none;
+}

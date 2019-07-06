@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./assets/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/detail.css">
+    <script src="./assets/zepto/zepto.min.js"></script>
+    <script src="assets/mui/js/mui.min.js"></script>
+    <script src="./assets/art-template/lib/template-web.js"></script>
+    <script src="./js/detail.js"></script>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav lt-header">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <h1 class="mui-title">商品详情</h1>
+    </header>
+
+
+    <div class="mui-scroll-wrapper my-content">
+        <div class="mui-scroll">
+
+            <div id="detailBox">
+
+            </div>
+
+
+            <div class="detail-buttons">
+                <a href="#">查看购物车</a><span id="addCart">加入购物车</span>
+            </div>
+        </div>
+    </div>
+
+    <script id="detailTpl" type="text/html">
+        <div class="mui-slider">
+            <div class="mui-slider-group mui-slider-loop">
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                    <a href="#"><img src="{{ data.pic[data.pic.length-1].picAddr }}" /></a>
+                </div>
+                {{ each data.pic val }}
+                <div class="mui-slider-item">
+                    <a href="#"><img src="{{ val.picAddr }}" /></a>
+                </div>
+                {{ /each }}
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                    <a href="#"><img src="{{ data.pic[0].picAddr }}" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="detail-title">
+            {{ data.proName }}
+        </div>
+        <div class="detail-price">
+            价格：<span class="new">¥{{ data.price }}</span><span class="old">¥{{ data.oldPrice }}</span>
+        </div>
+        <div class="detail-size">
+            尺码：
+            <% for(var i=0;i<data.size.length;i++){ %>
+                <span>{{ data.size[i] }}</span>
+                <% } %>
+        </div>
+        <div class="detail-num">
+            数量：<span class="reduce">-</span><input type="text" class="num" value="1"><span class="plus">+</span> 剩余：
+            <i>{{ data.num }}</i>件
+        </div>
+    </script>
+</body>
+
+</html>

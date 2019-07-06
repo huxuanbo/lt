@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="assets/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/search.css">
+    <script src="assets/mui/js/mui.min.js"></script>
+    <script src="assets/zepto/zepto.min.js"></script>
+    <script src="./assets/art-template/lib/template-web.js"></script>
+    <script src="./js/search.js"></script>
+
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav lt-header">
+        <a class="mui-action-back mui-icon mui-icon-back mui-pull-left"></a>
+        <h1 class="mui-title">搜索中心</h1>
+    </header>
+    <div class="mui-content">
+        <div class="container">
+            <div class="search">
+                <input type="text" placeholder="输入搜索内容">
+                <input type="button" value="搜索" id="search_btn">
+            </div>
+            <div class="search-list">
+                <div class="search-info mui-clearfix">
+                    <span class="mui-pull-left">搜索历史</span>
+                    <span class="mui-pull-right fa fa-trash" id="clear_data">清空历史</span>
+                </div>
+                <div class="search-info-list" id="render-data">
+                    <ul class="mui-table-view" id="historyBox">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script id="historyList" type="text/template">
+        {{ each data val }}
+        <li class="mui-table-view-cell">{{ val }}</li>
+        {{ /each }}
+    </script>
+</body>
+
+</html>
