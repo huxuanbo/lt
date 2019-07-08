@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="../m/assets/mui/css/mui.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/cart.css" />
+    <script src="../m/assets/mui/js/mui.min.js"></script>
+    <script src="../m/assets/zepto/zepto.min.js"></script>
+    <script src="./assets/art-template/lib/template-web.js"></script>
+    <script src="js/cart.js"></script>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav lt-header">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <h1 class="mui-title">购物车</h1>
+        <span id="delShoppingcart" class="mui-icon mui-icon-trash mui-pull-right" style="color: #fff;"></span>
+    </header>
+    <nav class="mui-bar mui-bar-tab lt-footer">
+        <a class="mui-tab-item" href="index.html">
+            <span class="mui-icon mui-icon-home"></span>
+            <span class="mui-tab-label">首页</span>
+        </a>
+        <a class="mui-tab-item" href="category.html">
+            <span class="mui-icon mui-icon-bars"></span>
+            <span class="mui-tab-label">分类</span>
+        </a>
+        <a class="mui-tab-item mui-active" href="cart.html">
+            <span class="mui-icon fa fa-shopping-cart fa-2x"></span>
+            <span class="mui-tab-label">购物车</span>
+        </a>
+        <a class="mui-tab-item" href="user.html">
+            <span class="mui-icon mui-icon-person"></span>
+            <span class="mui-tab-label">会员中心</span>
+        </a>
+    </nav>
+
+    <div id="commList">
+        <script type="text/template" id="tmp">
+            {{ each data val }}
+            <div class="mui-input-row mui-checkbox mui-left" id="listBox">
+                <img class=" mui-pull-left" src="{{ val.pic[0].picAddr }}">
+                <input type="hidden" id="hidden">
+                <div class="mui-media-body">
+                    <span class="mui-ellipsis-2 name">{{ val.proName }}</span>
+                    <p class="mui-ellipsis">商品简介</p>
+                    <span class="money">￥{{ val.price }}</span>
+                    <div class="mui-numbox" data-numbox-min="1">
+                        <button class="mui-btn mui-btn-numbox-minus" type="button" id="decrement">-</button>
+                        <input id="test" class="mui-input-numbox" type="number" value="1">
+                        <button class="mui-btn mui-btn-numbox-plus" type="button" id="increment">+</button>
+                    </div>
+                </div>
+                <input type="checkbox" id="checkbox">
+            </div>
+            {{ /each }}
+        </script>
+    </div>
+
+    <div class="shopCart">
+        <div class="left">
+            <div class="price">
+                <div class="mui-input-row mui-checkbox mui-left">
+                    <label>全选</label>
+                    <input id="checkAll" type="checkbox" style="top: 10px;">
+                </div>
+                <span>合计:￥</span>
+                <span id="total">0</span>
+            </div>
+        </div>
+        <div class="right" id="pay">去结算</div>
+    </div>
+
+
+</body>
+
+</html>

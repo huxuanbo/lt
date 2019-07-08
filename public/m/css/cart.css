@@ -1,0 +1,99 @@
+.shopCart:after,
+.shopCart .logo:after {
+    display: table;
+    content: '';
+    clear: both;
+}
+
+.shopCart {
+    position: fixed;
+    bottom: 50px;
+    width: 100%;
+    height: 50px;
+    background: #000000;
+    z-index: 1;
+}
+
+.shopCart div {
+    float: left;
+}
+
+.shopCart .left {
+    width: 70%;
+    height: 50px;
+    background: #fff;
+}
+
+.shopCart .right {
+    width: 30%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #1489EB;
+    color: #fff;
+}
+
+.shopCart .price {
+    line-height: 50px;
+    color: #000;
+}
+
+body {
+    padding-top: 44px;
+}
+
+.mui-input-group .mui-input-row {
+    height: auto;
+}
+
+.mui-checkbox input[type=checkbox] {
+    top: 50px;
+}
+
+.mui-checkbox a img {
+    margin-left: 58px;
+    margin-top: 5px;
+    margin-right: 5px;
+    width: 100px;
+    height: 100px;
+}
+
+.name {
+    color: #4A4A4D;
+    padding-top: 2px;
+}
+
+.money {
+    color: #FF5403;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.mui-media-body .mui-numbox {
+    width: 90px;
+    padding: 0 30px;
+}
+
+.mui-media-body .mui-numbox input {
+    color: #000;
+    background: #fff;
+}
+
+.mui-media-body .mui-numbox button {
+    width: 30px;
+}
+
+.mui-media-body {
+    padding-bottom: 5px;
+}
+
+.q-span {
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    line-height: 1.1;
+    float: left;
+    font-size: 18px;
+    width: 100%;
+    padding: 11px 15px;
+    padding-left: 20px;
+    border-bottom: 1px solid #bbb;
+}
